@@ -1,0 +1,482 @@
+ @font-face {
+  font-family: 'dubielitalic';
+  src: url("../fonts/DubielItalic-webfont.eot");
+  src: url("../fonts/DubielItalic-webfontd41d.eot?#iefix") format("embedded-opentype"), url("../fonts/DubielItalic-webfont.woff") format("woff"), url("../fonts/DubielItalic-webfont.ttf") format("truetype"), url("../fonts/DubielItalic-webfont.svg#dubielitalic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+ 
+ 
+ 
+section[id] {
+    padding: 5%;
+}
+.a:hover{
+  text-decoration: none!important;
+}
+.card-footer{
+    
+    min-height: 60px;
+    opacity:.9;
+    font-size:1.6em;
+
+
+}
+ .cL1{
+  background-image: url("../motif/cL1.jpg");
+}
+.cL2{
+   background-image: url("../motif/cL2.jpg");
+}
+.cL3{
+  background-image: url("../motif/cL3.jpg");
+}
+.cL4{
+    background-image: url("../motif/cL4.jpg");
+}
+.cL5{
+    background-image: url("../motif/cL5.jpg");
+}
+.cL6{
+    background-image: url("../motif/cL6.jpg");
+}
+
+
+
+.sikdTlsn {
+
+/*    font-family: "dubielitalic", Arial, sans-serif;*/
+    font-size: 3.6em;
+    padding-top: .6em;
+
+}
+.aplikasi{
+  padding-top: 70px;
+  padding-bottom: 40px;
+}
+
+.vers{
+    font-family: "dubielitalic", Arial, sans-serif;
+    font-size:2.6em;
+    padding-top:1.5%;
+}
+
+#top{
+/*  background-image: url("../ornament.png");*/
+
+}
+.btnKunjungi{
+   background-color: #bb7824;
+   padding: 5px;
+}
+
+.content-header { 
+    padding:30px;
+  }
+ 
+#faq{
+  background-color: #013c8f;
+  color:#fff;
+
+}
+
+
+
+.footer-contact-info {
+    background: #0d5ead;
+    color: #fff;
+    padding: 10px 20px; 
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+}
+
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 991px) {
+    
+    .footer-contact-info {
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+    
+}
+
+ 
+
+.footer-contact-info h4 {
+    padding-bottom: 10px;
+}
+ .card-base > .card-icon {
+        text-align: center;
+        position: relative;
+    }
+
+.imagecard { 
+    z-index: 2;
+    display: block;
+    position: relative;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    margin: 0 auto;
+    color: white;
+}
+.card-base > .card-icon > .card-data { 
+    margin-top: -24px;
+    background: ghostwhite;
+    border: 1px solid #e0e0e0; 
+    box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    min-height: 140px;
+    padding-top:20px;
+}
+#widgetCardIcon { 
+   background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e7/Batik_Indonesia.jpg");
+   font-size: 28px;
+   line-height: 78px;
+}
+
+.modal-dialog {
+  width:800px;
+}
+.thumbnail {
+  margin-bottom:6px;
+}
+ 
+
+.clearfix{
+  height: 30px;
+}
+
+
+ .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+ 
+    background-color: #2980b9;
+    color:#fff;
+
+}
+ 
+.left,.right{
+  display: inline-block; 
+
+}
+
+
+ @media (min-width: 768px) and (max-width: 991px) {
+      #myCarousel .carousel-inner .item .item-item:last-child {
+        display: none;
+      }
+   }
+@media (max-width: 768px) {
+     #mymyCarousel .carousel-inner {
+      height: 320px;
+    }
+ }
+.carousel-inner {
+  overflow-y: hidden;
+}
+.carousel-inner .active.left { left: -25%; }
+.carousel-inner .next        { left:  25%; }
+.carousel-inner .prev    { left: -25%; }
+.carousel-control        { width:  4%; }
+.carousel-control.left,.carousel-control.right {margin-left:15px;background-image:none;}
+.carousel-inner .item-item {
+  padding:0!important;
+}
+
+.nav-justified > li > a:focus, .nav-justified> li  {
+
+    background-color: #fff;
+    color:#000;
+
+}
+
+.agenda{
+  width:600px ;
+  height:400px ; 
+  border:0;
+  margin-left:4%;
+}
+
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 60px;
+}
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #22c0e8;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+
+#monitoring{
+  background-color: #013c8f;
+  color:#fafafa;
+}
+#infografis,#kontak{
+   background-color: #eee;  
+}
+#overview, #agenda, #video {
+  background-color: #fff;
+
+}
+ .page-header,  .page-headerblue , .page-headergrey {
+  border: 0;
+  margin: 40px 0 40px 0;
+  padding: 0;
+  position: relative;
+} 
+
+.page-header{
+   background-image: url("../motif/batikmandau2.png");
+}
+.page-header span {
+   z-index: 6;
+    display: inline-block;
+    background-color: #fff;
+    padding-right: 15px;
+     padding-left: 15px;
+    margin-top: 10px;
+ 
+
+}
+.page-headerblue span {
+
+    z-index: 5;
+    display: inline-block;
+    background-color: #013c8f;
+    padding-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+}
+.page-headergrey span {
+
+    z-index: 5;
+    display: inline-block;
+    background-color: #eee;
+    padding-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+}
+
+
+
+.trb{
+  background-color: #e6e6e6;
+  color:#000;
+} 
+.stats{
+  padding-left: 30px;
+}
+
+
+
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; 
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs.nav-justified > li > a {
+
+    margin-right: 0;
+    border-radius: 4px;
+
+
+}
+.fa {
+  padding-top: 20px;
+  font-size:3.4em!important;
+  padding-bottom: 0; 
+}
+.odd{
+  color:#3d3737;
+}
+.even{
+  color:#34495e;
+}
+#kontak > a:hover {
+  text-decoration: none;
+}
+.box1,.box2,.box3 {
+  min-height:200px;
+}
+.box1{background: #eb3b5a;}
+.box2{background:#d0d0d0;} 
+.box3{background:#fed330;}
+
+.main-footer{
+  padding-bottom:10px;
+  padding-top: -50px;
+}
+.main-footer> a{
+  color:#000;
+}
+.fa-arrow-up{
+  font-size:10px;
+}
+
+.panel-heading [data-toggle="collapse"]:after {
+  font-family: 'Glyphicons Halflings';
+  content: "e072"; /* "play" icon */
+  float: right;
+  color: #F58723;
+  font-size: 18px;
+  line-height: 22px; 
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.panel-heading [data-toggle="collapse"].collapsed:after { 
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  color: #454444;
+}
+
+
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+}
+
+#integration-list {
+    font-family: 'Open Sans', sans-serif;
+    width: 80%;
+    margin: 0 auto;
+    display: table;
+}
+#integration-list ul {
+    padding: 0;
+    margin: 20px 0;
+    color: #fff;
+}
+#integration-list ul > li {
+    list-style: none;
+    border-top: 1px solid #ddd;
+    display: block;
+    padding: 15px;
+    overflow: hidden;
+}
+#integration-list ul:last-child {
+    border-bottom: 1px solid #ddd;
+}
+#integration-list ul > li:hover {
+   /* background: #efefef;*/
+}
+.expand {
+    display: block;
+    text-decoration: none;
+   
+    cursor: pointer;
+} 
+#left,#right{
+    display: table;
+}
+ 
+.detail a {
+    text-decoration: none;
+    color: #C0392B;
+    border: 1px solid #C0392B;
+    padding: 6px 10px 5px;
+    font-size: 14px;
+}
+.detail {
+    margin: 10px 0 10px 0px;
+    display: none;
+    line-height: 22px;
+   /* height: 150px;*/
+    padding-left:30px;
+}
+.detail span{
+    margin: 0;
+}
+.right-arrow {
+    margin-top: 12px;
+    margin-left: 20px;
+    width: 10px;
+    height: 100%;
+    float: right;
+    font-weight: bold;
+    font-size: 20px;
+}
+.icon {
+    height: 75px;
+    width: 75px;
+    float: left;
+    margin: 0 15px 0 0;
+} 
+
+ .oddTlsn{
+  color:#403d3d;
+ }
+
+
+ .navbar-fixed-top{
+  transition:500ms ease;
+  background:#eee;
+} 
+.navbar-nav > li > a {
+color:#000066;
+padding-top:15px;
+
+}
+
+.nav > li > a:focus, .nav > li > a:hover { 
+    background-color: #ff0066;
+    font-weight: bold;
+
+}
+
+.navbar-toggle .icon-bar{
+    background-color: #000;
+}
+}
+ 

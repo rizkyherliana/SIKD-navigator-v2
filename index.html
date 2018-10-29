@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>SIKD Navigator</title>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<link href="SIKD%20Navigator_files/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="SIKD%20Navigator_files/css/font-awesome.css" rel="stylesheet" type="text/css">  
+<link href="SIKD%20Navigator_files/css/style.css" rel="stylesheet" type="text/css"> 
+<link href="SIKD%20Navigator_files/css/slider.css" rel="stylesheet" type="text/css"> 
+<link href="SIKD%20Navigator_files/css/animate.css" rel="stylesheet" type="text/css"> 
+<link href="SIKD%20Navigator_files/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+        <style>
+		.dak{
+			color:white!important;
+			list-style-type:none!important;
+			width:100%!important;
+			margin-bottom:0!important;
+			vertical-align:middle!important;
+			padding-left:0!important;
+			
+		}
+		  
+          
+            #components > h3 {
+                font-size: 25px;
+                border-bottom: 1px solid #dedede;
+                color: #000;
+            }
+            #components > h4 {
+                font-size: 20px;
+                color: #000;
+            }
+            
+            .page-header::before {
+                content: " ";
+                display: block;
+                background: #ccc;
+                width: 100%;
+                height: 1px;
+                position: absolute;
+                top: 50%;
+                margin-top: 2px;
+                z-index: -1;
+            }
+            .lead {
+                font-size: 16px;
+                font-weight: 400;
+            }
+            .eg{
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: inline-block;
+                background: #d2d6de;
+                padding: 5px;
+                border-bottom-right-radius: 3px;
+                border-top-left-radius: 3px;
+                border-bottom: 1px solid #d2d6dc;
+                border-right: 1px solid #d2d6dc;
+            }
+            .eg + * {
+                margin-top: 30px;
+            }/*
+            .content {
+                padding: 10px 25px;
+            }*/
+            .hierarchy {
+                background: #333;
+                color: #fff;
+            }
+            .plugins-list li {
+                width: 50%;
+                float: left;
+            }
+            pre {
+                border: none;
+            }
+            /* desert scheme ported from vim to google prettify */
+            pre.prettyprint {display: block; background-color: #333; max-height: 300px; border: none!important; margin-bottom: 20px;}
+            pre .nocode { background-color: none; color: #000 }
+            pre .str { color: #ffa0a0 } /* string  - pink */
+            pre .kwd { color: #f0e68c; font-weight: bold }
+            pre .com { color: #87ceeb } /* comment - skyblue */
+            pre .typ { color: #98fb98 } /* type    - lightgreen */
+            pre .lit { color: #cd5c5c } /* literal - darkred */
+            pre .pun { color: #fff }    /* punctuation */
+            pre .pln { color: #fff }    /* plaintext */
+            pre .tag { color: #f0e68c; font-weight: bold } /* html/xml tag    - lightyellow */
+            pre .atn { color: #bdb76b; font-weight: bold } /* attribute name  - khaki */
+            pre .atv { color: #ffa0a0 } /* attribute value - pink */
+            pre .dec { color: #98fb98 } /* decimal         - lightgreen */
+
+            /* Specify class=linenums on a pre to get line numbering */
+            ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE } /* IE indents via margin-left */
+            li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
+            /* Alternate shading for lines */
+            li.L1,li.L3,li.L5,li.L7,li.L9 { }
+
+            @media print {
+                pre.prettyprint { background-color: none }
+                pre .str, code .str { color: #060 }
+                pre .kwd, code .kwd { color: #006; font-weight: bold }
+                pre .com, code .com { color: #600; font-style: italic }
+                pre .typ, code .typ { color: #404; font-weight: bold }
+                pre .lit, code .lit { color: #044 }
+                pre .pun, code .pun { color: #440 }
+                pre .pln, code .pln { color: #000 }
+                pre .tag, code .tag { color: #006; font-weight: bold }
+                pre .atn, code .atn { color: #404 }
+                pre .atv, code .atv { color: #060 }
+            }
+            .sidebar {
+                margin-top: 0;
+                padding-top: 0!important;
+            }
+            .box .main-header {
+                z-index: 1000;
+                position: relative;
+            }
+            .treeview .nav li a:hover,
+            .treeview .nav li a:active {
+                background: transparent;
+            }
+
+		.x{text-align:center;}
+        </style>
+    </head>
+    <body class="skin-blue fixed" data-spy="scroll" data-target="#scrollspy">
+        <div id="return-to-top" class="hidden-xs">
+            <a href="javascript:" style="color:rgb(255, 0, 102)";><i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+
+        </div>
+      
+          <nav class="navbar  navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+           <a class="navbar-brand" href="http://www.djpk.kemenkeu.go.id/">
+            <img alt="Brand" src="SIKD%20Navigator_files/sikd2.png">
+          </a> 
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#top" class="menuTop">Home</a></li>
+            <li><a href="#overview" class="menuTop"> Overview SIKD</a></li> 
+            <!-- <li><a href="#visualisasi" class="menuTop">Visualisasi</a></li>
+            <li> <a href="#agenda"  class="menutop">Agenda</a></li>
+            <li> <a href="#monitoring"  class="menuTop">Monitoring</a></li> -->
+            <li><a href="#infografis"  class="menuTop">Infografis</a></li>
+            <li> <a href="#video"  class="menuTop">Video</a></li> 
+            <li><a href="#faq"  class="menuTop">FAQ</a></li>
+             <li><a href="#kontak"  class="menuTop">Kontak</a></li>
+            
+          </ul> 
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav> 
+    <div class="content-wrapper"  > 
+      <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel upper"> 
+  <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#bs-carousel" data-slide-to="1"></li>
+        <li data-target="#bs-carousel" data-slide-to="2"></li>
+      </ol> 
+      <div class="carousel-inner">
+        <div class="item slides active">
+          <div class="slide-1"></div>
+          <div class="hero">
+           <!--  <hgroup>
+                <h3>Lorem ipsum dolor sit amet</h3>        
+                <h5>consectetur adipiscing elit. Nunc rutrum a lorem id ullamcorper</h5>
+            </hgroup> -->
+          </div>
+        </div>
+        <div class="item slides">
+          <div class="slide-2"></div>
+          <div class="hero">        
+           <!--  <hgroup>
+                 <h3>Lorem ipsum dolor sit amet</h3>        
+                <h5>consectetur adipiscing elit. Nunc rutrum a lorem id ullamcorper</h5>
+            </hgroup>   -->     
+          </div>
+        </div>
+        <div class="item slides">
+          <div class="slide-3"></div>
+          <div class="hero">        
+            <!-- <hgroup>
+                 <h3>Lorem ipsum dolor sit amet</h3>        
+                <h5>consectetur adipiscing elit. Nunc rutrum a lorem id ullamcorper</h5>
+            </hgroup> -->
+          </div>
+        </div>
+      </div> 
+    </div>
+    <div class="content-header text-center" id="top">
+      <div class="try">
+        <h1 class="sikdTlsn">
+          Sistem Informasi Keuangan Daerah
+        </h1>
+        <div class="vers">version 2.1</div>
+         <div class="row aplikasi">
+            <div class = "col-lg-2 col-xs-12"">
+              <a href="http://sikd.djpk.kemenkeu.go.id/NewSIKD/index.jsf" target="_blank" class="boxLink" title="Style Builder" class="anchor btn btn-default btnKunjungi" > 
+                <div class="card-base">
+                  <div class="card-icon"> 
+                    <div class="card-data widgetCardData small-box bg-red x">
+                     <h2 class="box-title" style="color: #72502d;">Core SIKD</h2>
+                     <p class="card-block text-center">Aplikasi CORE SIKD </p>
+                    </div>
+                  <div class=" card-footer cL1"></div>
+                  </div>
+                   <div class="space"></div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-2 col-xs-12">
+              <a href="http://sikd.djpk.kemenkeu.go.id/NewSIKD/index.jsf" target="_blank" class="small-box-footer" title="Style Builder" class="anchor btn btn-default btnKunjungi" >  
+              <div class="card-base">
+                <div class="card-icon"> 
+                  <div class="card-data widgetCardData small-box bg-red x">
+                    <h2 class="box-title" style="color: #2a2930;">SINERGI</h2>
+                    <p class="card-block text-center">Aplikasi Agen SINERGi SIKD </p>
+                  </div> 
+                <div class="card-footer cL2"> </div>
+               </div>
+               <div class="space"></div>
+              </div> 
+              </a>
+            </div>
+            <div class="col-lg-2 col-xs-12">
+              <a href="http://www.djpk.kemenkeu.go.id/simpatik_web/" target="_blank" class="small-box-footer" title="Style Builder" class="anchor btn btn-default btnKunjungi" >  
+              <div class="card-base">
+                <div class="card-icon"> 
+                  <div class="card-data widgetCardData small-box bg-red x">
+                    <h2 class="box-title" style="color: #325677;">SIMPATIK</h2>
+                      <p class="card-block text-center">Aplikasi Agen Simpatik SIKD Versi Web </p> 
+                  </div>
+                  <div class="card-footer cL3"></div>
+                </div>
+                <div class="space"></div>
+              </div> 
+              </a>
+            </div> 
+            <div class="col-lg-2 col-xs-12">
+              <a href="http://www.djpk.kemenkeu.go.id/simpatik_web" target="_blank" class="small-box-footer" title="Style Builder" class="anchor btn btn-default btnKunjungi" >  
+              <div class="card-base">
+                <div class="card-icon"> 
+                  <div class="card-data widgetCardData small-box bg-red x">
+                    <h2 class="box-title" style="color: #2f2f34;">EIS SIKD</h2>
+                    <p class="card-block text-center">Aplikasi EIS SIKD </p> 
+                  </div>
+                  <div class="card-footer cL4"></div>
+                </div>
+                <div class="space"></div>
+              </div>
+              </a>
+            </div> 
+            <div class="col-lg-2 col-xs-12">
+              <div class="card-base">
+                <div class="card-icon"> 
+                  <div class="card-data widgetCardData small-box bg-red disabled">
+                    <div class="inner mu">
+                      <h2 class="box-title" style="color: #553e17;">DAK SIKD</h2>
+                      <a href="" id="t2" data-toggle="dropdown" target="_blank" class="dropdown-toggle" style="color:white">Daftar Aplikasi DAK SIKD</a>  
+                    </div>
+                    <div id="2nd" class="inner mu" hidden="">
+                       <ul class="dak">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://web.djpk.depkeu.go.id/sinkrondakfisik/login">1. SINKRON DAK FISIK</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://web.djpk.depkeu.go.id/sinkrondakfisik/login">&nbsp;</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.djpk.depkeu.go.id/daknf/">2. DAK NON FISIK</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="http://www.djpk.depkeu.go.id/daknf/">&nbsp;</a></li>
+                       </ul>
+                    </div>
+                  </div> 
+                  <div class="small-box-footer x">
+                    <div class="dropdown card-footer cL5"></div>
+                  </div>
+                </div>
+                <div class="space"></div>
+              </div>   
+             </div><!-- ./col -->
+            <div class="col-lg-2 col-xs-12">
+              <a href="https://play.google.com/store/apps/details?id=com.ionicframework.mitradjpk276099" target="_blank" class="small-box-footer" title="Style Builder" class="anchor btn btn-default btnKunjungi" >  
+              <div class="card-base">
+                <div class="card-icon"> 
+                  <div class="card-data widgetCardData small-box bg-red x">
+                     <h2 class="box-title" style="color: #242b4f;"> MITRA SIKD</h2>
+                     <p class="card-block text-center">Mobile Informasi Transfer</p>
+                  </div>
+                  <div class="card-footer cL6"></div>
+                </div>
+                <div class="space"></div>
+              </div>  
+              </a>
+            </div>
+          </div>  
+         </div>
+       </div> 
+       <section id="overview">
+        <div class="container-fluid">
+           <h2 class="text-center page-header"><span> Overview </span></h2> 
+            <div class="row">
+              <div class="col-md-12">
+                <div class="custom-tab">
+                  <ul class="nav nav-tabs nav-justified" role="tablist">
+                    <li class="active"><a href="#tab-1" role="tab" data-toggle="tab">Overview SIKD</a></li>
+                    <li><a href="#tab-2" role="tab" data-toggle="tab">Pembakuan SIKD</a></li>
+                    <li><a href="#tab-3" role="tab" data-toggle="tab">Agen SIKD</a></li>
+                    <li><a href="#tab-4" role="tab" data-toggle="tab">Developer SIKD</a></li>
+                  </ul>
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="tab-1">
+                      <div class="row"> 
+                        <div class="col-md-3 text-center"> 
+                           <img class="imgSIKD" slot="aside" src="sikd2.png" alt="Media Aside" />
+                        </div>
+                       <div class="col-md-9">
+                        <p>SIKD Sistem Informasi Keuangan Daerah yang selanjutnya disingkat SIKD adalah suatu sistem yang mendokumentasikan,  mengadministrasikan, serta mengolah data pengelolaan keuangan daerah dan data terkait lainnya menjadi informasi yang disajikan kepada masyarakat dan sebagai bahan pengambilan keputusan dalam rangka perencanaan, pelaksanaan, dan pelaporan pertanggungjawaban pemerintah daerah (Pasal 1 ayat 3, PMK 74 PMK.07 2016 tentang Penyelenggaraan Sistem Informasi Keuangan Daerah) </p>
+                       </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <h4>  Landasan Hukum</h4>
+                             <table class="table table-bordered table-striped table-condensed  ">
+                                <thead class="cf">
+                                 <tr>
+                                   <th>Nomor</th>
+                                   <th>Tentang</th >
+                                 </tr>
+                                </thead>
+                                <tbody>
+                                  <tr class="trblack">
+                                    <td data-title="Nomor">UU Nomor 33 Tahun 2004</td>
+                                     <td data-title="Tentang">Perimbangan Keuanngan antara Pemerintah Pusat dan Pemerintahan Daerah</td>  
+                                  </tr>
+                                  <tr>
+                                    <td data-title="Nomor">PP Nomor 56 Tahun 2005</td>
+                                    <td data-title="Tentang">Sistem Informasi Keuangan Daerah</td>  
+                                  </tr>
+                                  <tr class="trblack">
+                                    <td data-title="Nomor">PMK Nomor 74 Tahun 2016</td>
+                                    <td data-title="Tentang">Penyelenggaraan Sistem Informasi Keuangan Daerah</td>  
+                                  </tr>
+                                  <tr>
+                                    <td data-title="Nomor">PMK Nomor 93 Tahun 2016</td>
+                                    <td data-title="Tentang">Konversi Penyaluran DBH dan/atau DAU dalam Bentuk Non Tunai</td>  
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                         </div>
+                         <div class="tab-pane" id="tab-2">
+                           <div class="row">
+                            <div class="col-md-12">
+                              <table class="table table-bordered table-striped table-condensed ">
+                                <thead class="cf">
+                                  <tr>
+                                    <th>Jenis</th>
+                                    <th>Deskripsi</th >
+                                   </tr>
+                                </thead>
+                                <tbody>
+                                  <tr  class="trblack">
+                                    <td data-title="Jenis"> Pembakuan Pengkodean</td>
+                                    <td data-title="Deskripsi">Pengkodean pemerintah daerah dan pengkodean Bagan Akun Standar (BAS) SIKD</td> 
+                                  </tr>
+                                  <tr>
+                                     <td data-title="Jenis">Pembakuan Data </td>
+                                     <td data-title="Deskripsi">Pembakuan jenis dan periodisasi data serta elemen data</td> 
+                                  </tr>
+                                  <tr  class="trblack">
+                                    <td data-title="Jenis">  Pembakuan Prosedur </td>
+                                    <td data-title="Deskripsi">Pembakuan prosedur pengiriman data, prosedur validasi data, prosedur verifikasi dan rekonsiliasi data, dan prosedur kompilasi dan konsolidasi data </td>
+                                  </tr>
+                                  <tr>
+                                    <td data-title="Jenis">Pembakuan Infrastruktur pendukung SIKD  </td>
+                                    <td data-title="Deskripsi">Pembakuan standar minimal perangkat atau infrastruktur penyelenggaraan SIKD </td>
+                                  </tr>
+                                  <tr  class="trblack">
+                                    <td data-title="Jenis">Pembakuan Pertukaran Data </td>
+                                    <td data-title="Deskripsi">Pembakuan jenis data yang dipertukarkan diantara para pihak </td> 
+                                  </tr>
+                                  <tr>
+                                    <td data-title="Jenis">Pembakuan Penyajian Informasi  </td>
+                                    <td data-title="Deskripsi">Pembakuan penyajian informasi untuk kebutuhan pimpinan dan untuk informasi publik</td> 
+                                  </tr>
+                                  <tr  class="trblack">
+                                    <td data-title="Jenis"> Pembakuan Arsip  </td>
+                                    <td data-title="Deskripsi">Pembakuan penyimpanan dan pengelolaan arsip SIKD</td> 
+                                  </tr>
+                                  <tr>
+                                    <td data-title="Jenis"> Pembakuan Kode Urusan SIKD Nasional </td>
+                                    <td data-title="Deskripsi"> Pembakuan Kode Urusan SIKD Nasional tahun 2017 Kementerian Keuangan
+                                      <a href="http://www.djpk.kemenkeu.go.id/sikd/files/Kode_Urusan_2017.xlsx"> (Unduh di sini)</a>
+                                    </td>
+                                   </tr>
+                                  <tr  class="trblack">
+                                    <td data-title="Jenis">Penyampaian Tabel Pemetaan BAS, Urusan dan Perubahan SOTK </td> 
+                                    <td data-title="Deskripsi"> Surat dan Format Penyampaian Tabel Pemetaan BAS, Urusan dan Perubahan SOTK
+                                      <a href="http://www.djpk.kemenkeu.go.id/sikd/files/Permintaan_Pemetaan_BAS_Pemetaan_Urusan_dan_SOTK_Perubahan.pdf"> (Unduh surat di sini)</a> 
+                                      <a href="http://www.djpk.kemenkeu.go.id/sikd/files/format_Pemetaan_BAS_URUSAN_SIKD.xlsx">(Unduh format di ini)</a>
+                                    </td>
+                                  </tr>
+                                 </tbody>
+                               </table>
+                              </div>
+                            </div>
+                           </div>
+                           <div class="tab-pane" id="tab-3">
+                            <div class="row">
+                              <div class="col-md-12">
+                                <h5> Sekilas Agen SINERGI </h5>
+                                <p>Agen SIKD mengintegrasikan aplikasi SIKD Daerah dengan aplikasi SIKD Nasional. Agen SIKD mengkomunikasikan  data sesuai dengan standar yang ditetapkan dalam rangka penyelenggaraan SIKD Nasional. Pembakuan agen SIKD meliputi pembakuan fitur dan menu, pembakuan output, pembakuan database agen, pembakuan elemen dan struktur data, serta pembakuan konfigurasi. Penyelenggara agen SIKD meliputi agen SIKD yang dikembangkan oleh Kemenkeu dan/atau agen SIKD yang dikembangkan oleh Pemda atau pihak lain yang ditunjuk. Aplikasi Agen SIKD saat ini adalah aplikasi SINERGI SIKD.
+                                </p> 
+                               </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-12">
+                                <h5>Aplikasi Agen SIKD</h5>
+                                  <table class="table table-bordered table-striped table-condensed  ">
+                                    <thead class="cf">
+                                      <tr >
+                                        <th>Jenis</th>
+                                        <th>Deskripsi</th> 
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="trblack">
+                                        <td data-title="Jenis">Aplikasi Agen SINERGI SIKD</td>
+                                        <td data-title="Deskripsi">Aplikasi Agen SINERGI dapat diunduh dari menu Sinergi pada aplikasi Core SIKD Nasional</td>  
+                                      </tr>
+                                      <tr class="trblack">
+                                        <td data-title="Jenis">Manual Aplikasi Agen SINERGI</td>
+                                        <td data-title="Deskripsi">Manual aplikasi dapat dilihat pada menu Panduan > Manual Sinergi</td>  
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                              </div>
+                             </div>
+                           </div>
+                           <div class="tab-pane" id="tab-4">
+                            <div class="row">
+                              <div class="col-md-12">
+                                <h5> Peran Developer SIKD </h5>
+                                  <p>Dalam rangka pembinaan berkelanjutan terhadap pengembang SIKD Daerah untuk menjamin kualitas sistem yang dihasilkan dan kepatuhan atas ketentuan pembakuan SIKD dan pembakuan agen SIKD, maka koordinasi berkesinambungan dilakukan terhadap pengembang sistem di daerah. Tahap awal akan dilakukan pendataan dengan membuka pendaftaran pengembang SIKD Pemda dan melanjutkan kerjasama yang selama ini telah dilakukan. Para developer SIKD diharapkan dapat terus mengupdate secara berkesinambungan aplikasi sesuai dengan kebijakan pembakuan SIKD dan pembakuan agen SIKD termasuk update query untuk aplikasi agen SINERGI SIKD. </p>
+                              </div>
+                             </div>
+                            </div>
+                          </div>
+                        </div>
+                       </div>
+                     </div>
+                    </div>
+                  </section>             
+                  <section id="infografis"> 
+                    <div class="row">
+                      <h2 class="text-center page-headergrey"><span> Infografis</span></h2> 
+                      <div id="myCarouselWrapper" class="container-fluid">
+                        <div id="myCarousel" class="carousel slide">
+                           <div class="carousel-inner" role="listbox">
+                              <div class="item active">
+                                <div class="item-item col-md-3 col-sm-12"><a title="Image 1" href="#"><img class="thumbnail infimg img-responsive" src="SIKD%20Navigator_files/infografis/bas.jpg"></a>
+                                </div>
+                               </div>
+                              <div class="item">
+                               <div class="item-item col-md-3 col-sm-12"><a title="Image 2" href="#"><img src="SIKD%20Navigator_files/infografis/SinergiSimpatik.jpg" class="thumbnail infimg img-responsive"></a></div>
+                              </div>
+                              <div class="item">
+                                <div class="item-item col-md-3 col-sm-12"><a title="Image 3" href="#"><img src="SIKD%20Navigator_files/infografis/sinergi.jpg" class="thumbnail infimg img-responsive"></a></div>
+                              </div>
+                              <div class="item">
+                                <div class="item-item col-md-3 col-sm-12"><a title="Image 4" href="#"><img src="SIKD%20Navigator_files/infografis/pnsd.jpg" class="thumbnail infimg img-responsive"></a></div>
+                              </div>
+                            </div> 
+                          </div>   
+                        </div>
+                       </div>
+                      <div tabindex="-1" class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button class="close" type="button" data-dismiss="modal">×</button>
+                                <h3 class="modal-title">Heading</h3>
+                             </div>
+                             <div class="modal-body"> </div>
+                          </div>
+                        </div>
+                      </div> 
+                    </div>
+                    <section id="video"> 
+                        <div class="row">
+                            <h2 class="text-center page-header"><span> Video </span></h2> 
+                            <div class='list-group gallery video'>
+                                <div class='col-sm-12 col-xs-12 col-md-6 col-lg-6 '>
+                                    <div class="infografis ">
+                                        <video width="100%" height="240" controls>
+                                            <source src="SIKD%20Navigator_files/video/PenyampaianLaporanSIKD.mp4" href="video/PenyampaianLaporanSIKD.mp4" id="myImg" type="video/mp4" alt="Highlight Bagan Akun Standar"> 
+                                        </video>
+                                        <div class='text-right bottom'>
+                                            <small class='text-muted'>Penyampaian Laporan SIKD </small>
+                                        </div>  
+                                    </div>
+                                </div> 
+                                <div class='col-sm-12 col-xs-12 col-md-6 col-lg-6 '>
+                                    <div class="infografis ">
+                                        <video width="100%" height="240" controls>
+                                                <source src="SIKD%20Navigator_files/video/PenyampaianLaporanSIKD.mp4" href="video/PenyampaianLaporanSIKD.mp4" id="myImg" type="video/mp4" alt="Highlight Bagan Akun Standar"> 
+                                        </video>
+                                        <div class='text-right bottom '>
+                                            <small class='text-muted'>SIKD Roadmap</small>
+                                        </div>  
+                                    </div>
+                                </div> 
+                            </div>  
+                        </div>
+                    </section>
+					           <section id="faq">
+                        <h2 class="text-center page-headerblue"><span> FAQ </span></h2> 
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div id="integration-list">
+                                        <ul>
+                                            <li>
+                                                <div class="expand">
+                                                    <div class="right-arrow">+</div>
+                                                    <div>
+                                                        <h4>Jika terjadi eror pada aplikasi, apa yang perlu saya lakukan ? </h4>
+                                                    </div>
+                                                </div>
+                                                <div class="detail"> 
+                                                    <p> Dapat menghubungi kontak yang tertera atau bertanya di group FB Mitra SIKD </p>
+                                                     
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="expand">
+                                                    <div class="right-arrow">+</div>
+                                                    <div>
+                                                        <h4>Browser Compatibility </h4>
+                                                    </div>
+                                                </div>
+                                                <div class="detail"> 
+                                                    <p> Firefox (latest) </p>
+                                                    <p> Safari (latest) </p>
+                                                    <p> Chrome (latest) </p>
+                                                    <p> Opera (latest) </p>
+                                                </div>
+                                            </li>
+                                            <!-- <li>
+                                                <div class="expand">
+                                                    <div class="right-arrow">+</div>
+                                                    <div>
+                                                        <h4>Adakah modul petunjuk untuk SIKD Navigator ? </h4>
+                                                    </div>
+                                                </div>
+                                                <div class="detail"> 
+                                                    <p> Firefox (latest) </p>
+                                                   
+                                                </div>
+                                            </li> -->
+                                             <!-- <li>
+                                                <div class="expand">
+                                                    <div class="right-arrow">+</div>
+                                                    <div>
+                                                        <h4>Dimana saya dapat mengunduh modul petunjuk untuk setiap aplikasi SIKD Nasional ? </h4>
+                                                    </div>
+                                                </div>
+                                                <div class="detail"> 
+                                                    <p> Firefox (latest) </p>
+                                                   
+                                                </div>
+                                            </li> -->
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div> 
+                           
+                        </div>
+                    </section> 
+                    <section id="kontak">
+                        <h2 class="text-center page-headergrey"><span> Kontak </span></h2> 
+                        <div class="container-fluid">
+                            <div class="row">
+                               <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15866.805587318353!2d106.8391352!3d-6.1707223!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf9c964b69adf3b2e!2sDirektorat+Jenderal+Perimbangan+Keuangan+Kementerian+Keuangan!5e0!3m2!1sen!2sid!4v1538904645475" width="100%" height="320" frameborder="0" style="border:0" allowfullscreen></iframe>
+                             </div>
+                                <div class="row text-center">
+                                    <div class="col-md-4 box1 pt-4 oddTlsn">
+                                         <i class="fa fa-phone odd"></i>
+                                        <h4 class="d-none d-lg-block d-xl-block">Telpon</h4>
+                                        <p class="d-none d-lg-block d-xl-block">000000000</p> 
+                                    </div>
+                                    <div class="col-md-4 box2 pt-4">
+                                        <i class="fa fa-facebook even"></i>
+                                        <h4 class="d-none d-lg-block d-xl-block">Facebook</h4>
+                                        <a href="www.facebook.com/groups/1748841125415207/"><p class="d-none d-lg-block d-xl-block">Group Mitra SIKD</p>  </a>
+                                    </div>
+                                    <div class="col-md-4 box3 pt-4 oddTlsn">
+                                         <i class="fa fa-envelope odd"></i>
+                                        <h4 class="d-none d-lg-block d-xl-block">E-mail </h4>
+                                        <p class="d-none d-lg-block d-xl-block">ti.djpk@kemenkeu.go.id</p>
+                                         <p class="d-none d-lg-block d-xl-block">simpatik.djpk@kemenkeu.go.id</p>
+                                       
+                                    </div> 
+                                </div>
+ 
+                        </div>
+                    </div>
+              </section> 
+
+            <footer class="main-footer">
+                <div class="pull-right hidden-xs">
+                    <b>Version</b> 2.1
+                </div>
+                <strong><center>Copyright © 2018 <a href="http://www.djpk.kemenkeu.go.id/">DJPK - Kemenkeu R.I</a>. 
+                </strong>  All rights reserved.</center>
+            </footer>
+
+        </div> 
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="SIKD%20Navigator_files/js/jquery_002.js"></script>
+    <script src="SIKD%20Navigator_files/js/bootstrap.js" type="text/javascript"></script>  
+    <script src="SIKD%20Navigator_files/js/app.js" type="text/javascript"></script> 
+    <script src="SIKD%20Navigator_files/js/jquery.js" type="text/javascript"></script>
+    <script src="SIKD%20Navigator_files/js/response.js" type="text/javascript" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script> 
+    <script src="SIKD%20Navigator_files/js/nav.js"></script> 
+    <script src="SIKD%20Navigator_files/js/faq.js"></script> 
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+			$("#l2").text("kunjungi ");
+				$("#t2").on("click",function(){
+					$(".mu").toggle();
+					$("#2nd").is(":visible")?$("#l2").text("kembali "):$("#l2").text("kunjungi ");
+				
+				})
+			});
+		</script>
+       
+       <script> 
+            $(document).ready(function() {
+$('.thumbnail').click(function(){
+      $('.modal-body').empty();
+    var title = $(this).parent('a').attr("title");
+    $('.modal-title').html(title);
+    $($(this).parents('div').html()).appendTo('.modal-body');
+    $('#myModal').modal({show:true});
+});
+});
+       </script>
+       <script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+ <script type="text/javascript">
+     $('#myCarousel').carousel({
+  interval: 4000
+});
+
+$('.carousel .item').each(function(){
+  var next = $(this).next();
+  if (!next.length) {
+    next = $(this).siblings(':first');
+  }
+  next.children(':first-child').clone().appendTo($(this));
+
+  for (var i=0;i<2;i++) {
+    next=next.next();
+    if (!next.length) {
+      next = $(this).siblings(':first');
+    }
+
+    next.children(':first-child').clone().appendTo($(this));
+  }
+});
+ </script>
+ 
+<script>
+    // ===== Scroll to Top ==== 
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+        $('#return-to-top').fadeIn(200);    // Fade in the arrow
+    } else {
+        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+    }
+});
+$('#return-to-top').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+    }, 500);
+});
+</script>
+
+</body></html>
